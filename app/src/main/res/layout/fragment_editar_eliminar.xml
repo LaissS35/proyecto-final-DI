@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".editar_eliminar">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="45dp"
+            android:text="Titulo:"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/texttitulo"
+            app:layout_constraintEnd_toStartOf="@+id/texttitulo"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="413dp"
+            android:layout_marginBottom="91dp"
+            android:text="Tipo:"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/textoimagen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="37dp"
+            android:text="Año:"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textoimagen"
+            android:layout_width="105dp"
+            android:layout_height="88dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="143dp"
+            android:text="URL imagen"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textourl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <EditText
+            android:id="@+id/texttitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="324dp"
+            android:layout_marginEnd="38dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/texttipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toTopOf="@+id/textanyo"
+            app:layout_constraintEnd_toEndOf="@+id/textanyo" />
+
+        <EditText
+            android:id="@+id/textanyo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="456dp"
+            android:layout_marginEnd="28dp"
+            android:ems="10"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--<Button
+            android:id="@+id/buttoninsertar"
+            android:layout_width="124dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="204dp"
+            android:layout_marginBottom="40dp"
+            android:drawableEnd="@drawable/iconomas"
+            android:text="Crear"
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toTopOf="@+id/buttonactualizar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textanyo"
+            app:layout_constraintVertical_bias="120" />-->
+
+
+        <Button
+            android:id="@+id/buttonEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="16dp"
+            android:drawableEnd="@drawable/iconobasura"
+            android:text="ELIMINAR"
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonactualizar"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/buttonactualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:drawableEnd="@drawable/iconoactualizar"
+            android:text="Actualizar"
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buttonEliminar" />
+
+        <Button
+            android:id="@+id/buttoninsertar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:drawableEnd="@drawable/iconomas"
+            android:text="insertar"
+            android:textColor="#ffffff"
+            app:layout_constraintStart_toEndOf="@+id/textoimagen"
+            app:layout_constraintTop_toBottomOf="@+id/textoimagen"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="273dp"
+            android:layout_height="308dp"
+            android:layout_marginStart="85dp"
+            android:layout_marginEnd="86dp"
+            android:src="@android:drawable/ic_menu_add"
+            app:layout_constraintEnd_toEndOf="@+id/texttitulo"
+            app:layout_constraintHorizontal_bias="0.479"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <EditText
+            android:id="@+id/textourl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="26dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textoimagen"
+            app:layout_constraintTop_toBottomOf="@+id/textanyo" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

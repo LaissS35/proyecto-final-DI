@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.recicle.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_comentario_fragment"
+            app:destination="@id/Comentario_fragment" />
+        <action
+            android:id="@+id/inicio_a_informacion"
+            app:destination="@id/informacionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.recicle.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_editar_eliminar"
+            app:destination="@id/editar_eliminar" />
+        <action
+            android:id="@+id/action_SecondFragment_to_comentario_fragment"
+            app:destination="@id/Comentario_fragment" />
+        <action
+            android:id="@+id/segundo_a_informacion"
+            app:destination="@id/informacionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editar_eliminar"
+        android:name="com.example.recicle.editar_eliminar"
+        android:label="fragment_editar_eliminar"
+        tools:layout="@layout/fragment_editar_eliminar" >
+        <action
+            android:id="@+id/action_editar_eliminar_to_comentario_fragment"
+            app:destination="@id/Comentario_fragment" />
+        <action
+            android:id="@+id/editar_a_informacion"
+            app:destination="@id/informacionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/Comentario_fragment"
+        android:name="com.example.recicle.comentarios.Comentario_fragment"
+        android:label="fragment_comentario_fragment"
+        tools:layout="@layout/fragment_comentario_fragment" >
+        <action
+            android:id="@+id/comentario_fragment_to_crearCFragment"
+            app:destination="@id/crearCFragment" />
+        <action
+            android:id="@+id/comentarios_a_informacion"
+            app:destination="@id/informacionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearCFragment"
+        android:name="com.example.recicle.CrearCFragment"
+        android:label="fragment_crear_c"
+        tools:layout="@layout/fragment_crear_c" >
+        <action
+            android:id="@+id/crearC_a_informacion"
+            app:destination="@id/informacionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/informacionFragment"
+        android:name="com.example.recicle.InformacionFragment"
+        android:label="fragment_informacion"
+        tools:layout="@layout/fragment_informacion" />
+    <fragment
+        android:id="@+id/verFragment"
+        android:name="com.example.recicle.VerFragment"
+        android:label="fragment_ver"
+        tools:layout="@layout/fragment_ver" />
+</navigation>

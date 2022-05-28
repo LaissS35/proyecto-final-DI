@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.recicle.MainActivity">
+
+    <item
+        android:id="@+id/frameLayout"
+        android:icon="@drawable/iconomas"
+        android:orderInCategory="100"
+        android:title="@string/crear_pelicula"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/frameLayout2"
+        android:orderInCategory="100"
+        android:icon="@drawable/iconoatras"
+        android:title="@string/crear_pelicula"
+        app:showAsAction="ifRoom" />
+
+
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_settings"
+        android:title="Información"
+        app:showAsAction="never"/>
+    <item android:id="@+id/atras"
+        android:title="Comentarios"
+        app:showAsAction="never"/>
+</menu>
+
